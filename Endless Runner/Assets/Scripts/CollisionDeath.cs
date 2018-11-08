@@ -6,13 +6,9 @@ using UnityEngine.SceneManagement;
 public class CollisionDeath : MonoBehaviour {
 
 	// Use this for initialization
-	void OnCollisionEnter(Collision col) {
-		if(col.gameObject.tag == "Player")
-        {
-            Destroy(col.gameObject);
+	void Death() {
+            Destroy(GameObject.FindGameObjectWithTag("Player"));
             SceneManager.LoadScene("DeathScreen");
         }
-	}
-	
 	
 }

@@ -465,7 +465,7 @@ PlayerSettings:
     Collab: 0
     ErrorHub: 0
     Hub: 0
-    UNet: 0
+    UNet: 1
   cloudProjectId: 92a8cfed-f455-4870-a327-6de81d196186
   projectName: Endless Runner
   organizationId: patrick_oconnor

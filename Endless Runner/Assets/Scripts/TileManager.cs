@@ -21,6 +21,17 @@ public class TileManager : MonoBehaviour
         activeTiles = new List<GameObject>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
+        //so first tile is always the flat prefab without obsticles, we add this here
+        //might revise to see if there is a better way of doing it
+
+
+        GameObject go;
+        go = Instantiate(tilePrefabs[0]) as GameObject;
+        go.transform.SetParent(transform);
+        go.transform.position = Vector3.forward * spawnZ;
+        spawnZ += tileLength;
+        activeTiles.Add(go);
+
         for (int i = 0; i < amnTilesOnScreen; i++)
         {
             SpawnTile();

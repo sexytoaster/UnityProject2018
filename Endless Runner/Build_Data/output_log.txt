@@ -1,0 +1,46 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   21.20.16.4550
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.051 seconds
+Platform assembly: C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\School\Year 3\Semester 1\Product Design\Endless Runner\Build_Data\Managed\System.dll (this message is harmless)
+desktop: 3200x1800 60Hz; virtual: 3200x1800 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 4.810267 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Restart.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 34e8 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 24.707930 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 311.
+Total: 0.208987 ms (FindLiveObjects: 0.037135 ms CreateObjectMapping: 0.020148 ms MarkObjects: 0.135901 ms  DeleteObjects: 0.008691 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.311703 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 311.
+Total: 0.251259 ms (FindLiveObjects: 0.050567 ms CreateObjectMapping: 0.014222 ms MarkObjects: 0.178172 ms  DeleteObjects: 0.007111 ms)
+

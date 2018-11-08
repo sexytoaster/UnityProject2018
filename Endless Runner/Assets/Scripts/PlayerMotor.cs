@@ -8,9 +8,9 @@ public class PlayerMotor : MonoBehaviour
 
 
     private CharacterController controller;
-    private float jumpForce = 4.0f;
+    private float jumpForce = 8.0f;
     private float gravity = 12.0f;
-    private float veriticalVelocity;
+    private float verticalVelocity;
     private float speed = 7.0f;
     private int desiredLane = 1; //0 = left, 1 = middle, 2 = right
 
@@ -21,6 +21,8 @@ public class PlayerMotor : MonoBehaviour
 
     void Update()
     {
+        
+        speed = speed + .01f;
         if (Input.GetKeyDown(KeyCode.A))
         {
             MoveLane(false);
@@ -42,8 +44,31 @@ public class PlayerMotor : MonoBehaviour
         //calculate move delta
         Vector3 moveVector = Vector3.zero;
         moveVector.x = (targetPosition - transform.position).normalized.x * speed;
-        moveVector.y = -9.8f;
+
+        if(controller.isGrounded) //if grounded
+        {
+            verticalVelocity = -0.1f;
+
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                //jump
+                verticalVelocity = jumpForce;
+            }
+
+        }
+        else
+        {
+            verticalVelocity -= (gravity * Time.deltaTime);
+            //fast Fall
+            if(Input.GetKeyDown(KeyCode.S))
+            {
+                verticalVelocity = -jumpForce;
+            }
+        }
+
+        moveVector.y = verticalVelocity;
         moveVector.z = speed;
+
 
         controller.Move(moveVector * Time.deltaTime);
     }
@@ -61,6 +86,14 @@ public class PlayerMotor : MonoBehaviour
             desiredLane++;
             if (desiredLane == 3)
                 desiredLane = 2;
+        }
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.transform.tag == "Death")
+        {
+            hit.transform.SendMessage("Death", SendMessageOptions.DontRequireReceiver);
         }
     }
 }
