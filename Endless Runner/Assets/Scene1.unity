@@ -101,7 +101,7 @@ Prefab:
     - target: {fileID: 114371415043861664, guid: 00c125b3d7f753044a3169d82056c679,
         type: 2}
       propertyPath: tilePrefabs.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4777291272564850, guid: 00c125b3d7f753044a3169d82056c679, type: 2}
       propertyPath: m_LocalPosition.x
@@ -140,6 +140,30 @@ Prefab:
       propertyPath: tilePrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 1565713737649450, guid: c73e8338d13d3c140bb86cfbc51f0767,
+        type: 2}
+    - target: {fileID: 114371415043861664, guid: 00c125b3d7f753044a3169d82056c679,
+        type: 2}
+      propertyPath: tilePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1566805027441496, guid: acba5376a507580449ebe814ada1e376,
+        type: 2}
+    - target: {fileID: 114371415043861664, guid: 00c125b3d7f753044a3169d82056c679,
+        type: 2}
+      propertyPath: tilePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1527744373205828, guid: ee3d61ce547c0e24dac4f3b240d62ffc,
+        type: 2}
+    - target: {fileID: 114371415043861664, guid: 00c125b3d7f753044a3169d82056c679,
+        type: 2}
+      propertyPath: tilePrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1831199310612770, guid: e20730b97db116a42abe0effe47c38fd,
+        type: 2}
+    - target: {fileID: 114371415043861664, guid: 00c125b3d7f753044a3169d82056c679,
+        type: 2}
+      propertyPath: tilePrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1046755143636004, guid: 1a1b7d40c875c5d40ac1cb4809636fae,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00c125b3d7f753044a3169d82056c679, type: 2}
@@ -269,7 +293,7 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1113879937
@@ -303,6 +327,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefabs:
   - {fileID: 1565713737649450, guid: c73e8338d13d3c140bb86cfbc51f0767, type: 2}
+  - {fileID: 1566805027441496, guid: acba5376a507580449ebe814ada1e376, type: 2}
+  - {fileID: 1527744373205828, guid: ee3d61ce547c0e24dac4f3b240d62ffc, type: 2}
+  - {fileID: 1831199310612770, guid: e20730b97db116a42abe0effe47c38fd, type: 2}
+  - {fileID: 1046755143636004, guid: 1a1b7d40c875c5d40ac1cb4809636fae, type: 2}
 --- !u!4 &1113879939
 Transform:
   m_ObjectHideFlags: 0
