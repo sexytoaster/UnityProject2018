@@ -12,8 +12,8 @@ public class TileManager : MonoBehaviour
     private int amnTilesOnScreen = 7;
     private float safeZone = 15.0f;
     private int lastPrefabIndex = 0;
-
-
+    public bool firstLap = false;
+    bool originMoved = false;
     private List<GameObject> activeTiles;
     // Use this for initialization
     void Start()
@@ -41,11 +41,24 @@ public class TileManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(spawnZ > 110)
+        {
+            originMoved = true;
+        }
+
+        float z = GameObject.FindGameObjectWithTag("Player").transform.position.z;
+        if (z < 50 && firstLap == true && originMoved == true)
+        {
+
+            originMoved = false;
+            spawnZ = 59.5f;
+        }
         if (playerTransform.position.z - safeZone > (spawnZ - amnTilesOnScreen * tileLength))
         {
             SpawnTile();
             DeleteTile();
         }
+
     }
 
     private void SpawnTile(int prefabIndex = -1)
@@ -62,7 +75,7 @@ public class TileManager : MonoBehaviour
     {
         Destroy(activeTiles[0]);
         activeTiles.RemoveAt(0);
-
+        firstLap = true;
     }
 
     private int RandomPrefabIndex()

@@ -8,11 +8,11 @@ public class PlayerMotor : MonoBehaviour
 
 
     private CharacterController controller;
-    private float jumpForce = 8.0f;
+    private float jumpForce = 6.0f;
     private float gravity = 12.0f;
     private float verticalVelocity;
     private float speed = 7.0f;
-    private int desiredLane = 1; //0 = left, 1 = middle, 2 = right
+    public int desiredLane = 1; //0 = left, 1 = middle, 2 = right
 
     void Start()
     {
@@ -49,10 +49,16 @@ public class PlayerMotor : MonoBehaviour
         {
             verticalVelocity = -0.1f;
 
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 //jump
                 verticalVelocity = jumpForce;
+            }
+            else if(Input.GetKeyDown(KeyCode.S))
+            {
+                //slide
+                StartSliding();
+                Invoke("StopSliding", 1.0f);
             }
 
         }
@@ -95,5 +101,25 @@ public class PlayerMotor : MonoBehaviour
         {
             hit.transform.SendMessage("Death", SendMessageOptions.DontRequireReceiver);
         }
+    }
+
+    private void StartSliding()
+    {
+        controller.height = .5f;
+        controller.radius = .25f;
+        controller.center = new Vector3(controller.center.x, -.25f, controller.center.z);
+        Vector3 playerSize = transform.localScale;
+        playerSize /= 2;
+        transform.localScale = playerSize;
+    }
+
+    private void StopSliding()
+    {
+        controller.height = 1;
+        controller.radius = .5f;
+        controller.center = new Vector3(controller.center.x, 0, controller.center.z);
+        Vector3 playerSize = transform.localScale;
+        playerSize *= 2;
+        transform.localScale = playerSize;
     }
 }
