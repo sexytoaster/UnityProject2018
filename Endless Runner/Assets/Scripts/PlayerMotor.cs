@@ -13,6 +13,7 @@ public class PlayerMotor : MonoBehaviour
     private float verticalVelocity;
     private float speed = 7.0f;
     public int desiredLane = 1; //0 = left, 1 = middle, 2 = right
+    public bool sliding = false;
 
     void Start()
     {
@@ -57,8 +58,11 @@ public class PlayerMotor : MonoBehaviour
             else if(Input.GetKeyDown(KeyCode.S))
             {
                 //slide
-                StartSliding();
-                Invoke("StopSliding", 1.0f);
+                if (sliding == false)
+                {
+                    StartSliding();
+                    Invoke("StopSliding", 1.0f);
+                }
             }
 
         }
@@ -105,21 +109,27 @@ public class PlayerMotor : MonoBehaviour
 
     private void StartSliding()
     {
-        controller.height = .5f;
-        controller.radius = .25f;
-        controller.center = new Vector3(controller.center.x, -.25f, controller.center.z);
-        Vector3 playerSize = transform.localScale;
-        playerSize /= 2;
-        transform.localScale = playerSize;
+        if (sliding == false)
+        {
+            controller.height = .5f;
+            controller.radius = .25f;
+            controller.center = new Vector3(controller.center.x, -.25f, controller.center.z);
+            Vector3 playerSize = transform.localScale;
+            playerSize /= 2;
+            transform.localScale = playerSize;
+            sliding = true;
+        }
     }
 
     private void StopSliding()
     {
+
         controller.height = 1;
         controller.radius = .5f;
         controller.center = new Vector3(controller.center.x, 0, controller.center.z);
         Vector3 playerSize = transform.localScale;
         playerSize *= 2;
         transform.localScale = playerSize;
+        sliding = false;
     }
 }

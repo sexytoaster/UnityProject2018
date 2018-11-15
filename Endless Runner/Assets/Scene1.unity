@@ -101,7 +101,7 @@ Prefab:
     - target: {fileID: 114371415043861664, guid: 00c125b3d7f753044a3169d82056c679,
         type: 2}
       propertyPath: tilePrefabs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4777291272564850, guid: 00c125b3d7f753044a3169d82056c679, type: 2}
       propertyPath: m_LocalPosition.x
@@ -151,7 +151,7 @@ Prefab:
         type: 2}
       propertyPath: tilePrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 1848466612845152, guid: ee3d61ce547c0e24dac4f3b240d62ffc,
+      objectReference: {fileID: 1574927989839216, guid: ee3d61ce547c0e24dac4f3b240d62ffc,
         type: 2}
     - target: {fileID: 114371415043861664, guid: 00c125b3d7f753044a3169d82056c679,
         type: 2}
@@ -164,6 +164,12 @@ Prefab:
       propertyPath: tilePrefabs.Array.data[4]
       value: 
       objectReference: {fileID: 1214661830130398, guid: 1a1b7d40c875c5d40ac1cb4809636fae,
+        type: 2}
+    - target: {fileID: 114371415043861664, guid: 00c125b3d7f753044a3169d82056c679,
+        type: 2}
+      propertyPath: tilePrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 1344410026923502, guid: d6ef3105ce8006340be073e244650df4,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00c125b3d7f753044a3169d82056c679, type: 2}
@@ -276,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredLane: 1
+  sliding: 0
 --- !u!143 &1088407359
 CharacterController:
   m_ObjectHideFlags: 0
@@ -325,9 +332,10 @@ MonoBehaviour:
   tilePrefabs:
   - {fileID: 1565713737649450, guid: c73e8338d13d3c140bb86cfbc51f0767, type: 2}
   - {fileID: 1163358235916898, guid: acba5376a507580449ebe814ada1e376, type: 2}
-  - {fileID: 1848466612845152, guid: ee3d61ce547c0e24dac4f3b240d62ffc, type: 2}
+  - {fileID: 1574927989839216, guid: ee3d61ce547c0e24dac4f3b240d62ffc, type: 2}
   - {fileID: 1686744989044758, guid: e20730b97db116a42abe0effe47c38fd, type: 2}
   - {fileID: 1214661830130398, guid: 1a1b7d40c875c5d40ac1cb4809636fae, type: 2}
+  - {fileID: 1344410026923502, guid: d6ef3105ce8006340be073e244650df4, type: 2}
   firstLap: 0
 --- !u!4 &1113879939
 Transform:

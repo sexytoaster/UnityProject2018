@@ -37,21 +37,6 @@ public class FloatingOrigin : MonoBehaviour
 
             Object[] objects = FindObjectsOfType(typeof(Transform));
 
-
-            /* foreach (Object o in objects)
-             {
-                 if (o.name == "Player")
-                 {
-                     Transform t = (Transform)o;
-                     if (t.parent == null)
-                     {
-                         t.position -= cameraPosition;
-                     }
-                 }
-             }
-             */
-
-
             foreach (Object o in objects)
             {
 
@@ -63,43 +48,7 @@ public class FloatingOrigin : MonoBehaviour
                         t.position -= cameraPosition - offset;
                     }
                 }
-           /* foreach (Object o in objects)
-            {
-                if (o.name != "Player")
-                {
-
-
-                Transform t = (Transform)o;
-                if (playerScript.desiredLane == 2)
-                {
-
-                    if (t.parent == null)
-                    {
-                        t.position -= cameraPosition;
-                        t.position = t.position + new Vector3(-2, 0, 0);
-                    }
-                }
-                if (playerScript.desiredLane == 0)
-                {
-
-                    if (t.parent == null)
-                    {
-                        t.position -= cameraPosition;
-                        t.position = t.position + new Vector3(2, 0, 0);
-                    }
-                }
-              }
-            } */
-
-            /* foreach (Object p in planes)
-             {
-                 Transform t = (Transform)p;
-                     if (t.parent == null)
-                     {
-                     t.position;
-                     }
-                 }
-             }*/
+           
 
 #if SUPPORT_OLD_PARTICLE_SYSTEM
             // move active particles from old Unity particle system that are active in world space
@@ -192,34 +141,3 @@ public class FloatingOrigin : MonoBehaviour
     }
 }
 
-/*
-Addendum from DulcetTone on 22 April 2018: a user named Marcos-Elias sent me a message with an optimization he found helpful on recent versions of Unity which include the new "SceneManager" functionality.  
- 
-He suggests replacing this fragment of my code:
- 
-Object[] objects = FindObjectsOfType(typeof(Transform));
-      foreach(Object o in objects)
-      {
-          Transform t = (Transform)o;
-          if (t.parent == null)
-          {
-             t.position -= cameraPosition;
-          }
-      }
- 
-with the following code, to avoid having to process ALL objects to find the root objects
- 
-for (int z=0; z < SceneManager.sceneCount; z++) {
-       foreach (GameObject g in SceneManager.GetSceneAt(z).GetRootGameObjects()) {
-           g.transform.position -= cameraPosition;
-       }
-}
- 
-I have not use this myself, as yet, but I wonder if an additional optimation would be the following, to update only the active scene:
- 
-foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {
-           g.transform.position -= cameraPosition;
-}
- 
- 
-*/
