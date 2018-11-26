@@ -11,9 +11,10 @@ public class PlayerMotor : MonoBehaviour
     private float jumpForce = 6.0f;
     private float gravity = 12.0f;
     private float verticalVelocity;
-    private float speed = 7.0f;
+    public float speed = 7.0f;
     public int desiredLane = 1; //0 = left, 1 = middle, 2 = right
     public bool sliding = false;
+    public bool magnetic = true;
 
     void Start()
     {
