@@ -8,8 +8,8 @@ public class TileManager : MonoBehaviour
 
     private Transform playerTransform;
     private float spawnZ = 0.0f;
-    private float tileLength = 10.0f;
-    private int amnTilesOnScreen = 9;
+    private float tileLength = 18.0f;
+    private int amnTilesOnScreen = 5;
     private float safeZone = 15.0f;
     private int lastPrefabIndex = 0;
     public bool firstLap = false;
@@ -41,7 +41,7 @@ public class TileManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spawnZ > (40f + (amnTilesOnScreen * tileLength)))
+        if(spawnZ > (50f + (amnTilesOnScreen * tileLength)))
         {
             originMoved = true;
         }

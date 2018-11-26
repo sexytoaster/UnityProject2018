@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMotor : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlayerMotor : MonoBehaviour
     public float speed = 7.0f;
     public int desiredLane = 1; //0 = left, 1 = middle, 2 = right
     public bool sliding = false;
-    public bool magnetic = true;
+    public bool magnetic = false;
 
     void Start()
     {
@@ -104,7 +105,7 @@ public class PlayerMotor : MonoBehaviour
     {
         if (hit.transform.tag == "Death")
         {
-            hit.transform.SendMessage("Death", SendMessageOptions.DontRequireReceiver);
+            SceneManager.LoadScene("DeathScreen");
         }
     }
 
