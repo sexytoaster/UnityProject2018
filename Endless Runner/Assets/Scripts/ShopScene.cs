@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ShopScene : MonoBehaviour {
+public class ShopScene : MonoBehaviour
+{
 
     // Use this for initialization
     void Start()
