@@ -47,7 +47,7 @@ public class TileManager : MonoBehaviour
         }
 
         float z = GameObject.FindGameObjectWithTag("Player").transform.position.z;
-        if (z < 50 && firstLap == true && originMoved == true)
+        if (z < 48 && firstLap == true && originMoved == true)
         {
 
             originMoved = false;
