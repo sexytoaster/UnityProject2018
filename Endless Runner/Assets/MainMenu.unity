@@ -762,9 +762,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 1270586921}
+        m_MethodName: ExitGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1169,6 +1169,7 @@ GameObject:
   - component: {fileID: 1270586920}
   - component: {fileID: 1270586919}
   - component: {fileID: 1270586918}
+  - component: {fileID: 1270586921}
   m_Layer: 0
   m_Name: ButtonScriptGO
   m_TagString: Untagged
@@ -1231,6 +1232,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fdd1812071c90e40abb3e52c61198f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1270586921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270586915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baba34cd7d017a642a2b072d601aa5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1288866024
