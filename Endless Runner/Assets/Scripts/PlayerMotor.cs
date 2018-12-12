@@ -9,7 +9,7 @@ public class PlayerMotor : MonoBehaviour
 
 
     private CharacterController controller;
-    private float jumpForce = 7.0f;
+    private float jumpForce = 8.0f;
     private float gravity = 12.0f;
     private float verticalVelocity;
     public float speed = 7.0f;
