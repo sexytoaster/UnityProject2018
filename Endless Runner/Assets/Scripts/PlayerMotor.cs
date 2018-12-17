@@ -33,6 +33,8 @@ public class PlayerMotor : MonoBehaviour
         {
             Debug.Log("1st Working");
             StartCoroutine(Headstart());
+
+            headstart = false;
         }
         speed = speed + .01f;
         if (Input.GetKeyDown(KeyCode.A))
@@ -147,7 +149,6 @@ public class PlayerMotor : MonoBehaviour
 
     IEnumerator Headstart()
     {
-        Debug.Log("Working");
         float time = 0;
         tempSpeed = speed;
         speed = 40f;
@@ -155,6 +156,6 @@ public class PlayerMotor : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
         speed = tempSpeed;
         collider.enabled = !collider.enabled;
-        headstart = false;
+        Debug.Log("Working");
     }
 }

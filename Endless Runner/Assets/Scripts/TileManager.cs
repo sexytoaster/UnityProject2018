@@ -98,7 +98,6 @@ public class TileManager : MonoBehaviour
 
             }
             currentSpace = currentSpace + coinSpace;
-            Debug.Log(temp);
         }
         go.transform.SetParent(transform);
         go.transform.position = Vector3.forward * spawnZ;
