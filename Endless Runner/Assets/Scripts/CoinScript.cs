@@ -27,9 +27,15 @@ public class CoinScript : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Coin??");
         if (other.name == "Player")
         {
-            other.GetComponent<Score>().Coins++;
+            GameObject.FindGameObjectWithTag("Manager").GetComponent<Score>().Coins++;
+            Destroy(gameObject);
+            Debug.Log("Coin??");
+        }
+        else
+        {
             Destroy(gameObject);
         }
     }

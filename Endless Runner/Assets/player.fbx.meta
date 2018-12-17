@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: f9c2d64f2a9a61843a094895a2d91fde
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature.002
+    100002: Body1
+    100004: Body2
+    100006: Body3
+    100008: Camera
+    100010: Head
+    100012: Head_end
+    100014: L_Arm1
+    100016: L_Arm2
+    100018: L_Foot
+    100020: L_Foot_end
+    100022: L_Hand
+    100024: L_Hand_end
+    100026: L_Leg1
+    100028: L_Leg2
+    100030: Lamp
+    100032: Plane
+    100034: //RootNode
+    100036: R_Arm1
+    100038: R_Arm2
+    100040: R_Foot
+    100042: R_Foot_end
+    100044: R_Hand
+    100046: R_Hand_end
+    100048: R_Leg1
+    100050: R_Leg2
+    100052: Sphere.001
+    100054: Sun
+    400000: Armature.002
+    400002: Body1
+    400004: Body2
+    400006: Body3
+    400008: Camera
+    400010: Head
+    400012: Head_end
+    400014: L_Arm1
+    400016: L_Arm2
+    400018: L_Foot
+    400020: L_Foot_end
+    400022: L_Hand
+    400024: L_Hand_end
+    400026: L_Leg1
+    400028: L_Leg2
+    400030: Lamp
+    400032: Plane
+    400034: //RootNode
+    400036: R_Arm1
+    400038: R_Arm2
+    400040: R_Foot
+    400042: R_Foot_end
+    400044: R_Hand
+    400046: R_Hand_end
+    400048: R_Leg1
+    400050: R_Leg2
+    400052: Sphere.001
+    400054: Sun
+    2000000: Camera
+    2100000: casquette
+    2100002: Material.002
+    2100004: Material.001
+    2100006: Material.003
+    2100008: Material
+    2100010: Blanc
+    2100012: noir
+    2300000: Plane
+    3300000: Plane
+    4300000: Sphere.001
+    4300002: Plane
+    7400000: Slide
+    7400002: Walk
+    7400004: Armature.002|Action.001
+    7400006: Armature.002|Action.004
+    7400008: Armature.002|Jump
+    7400010: Armature.002|Run
+    7400012: Armature.002|Slide
+    7400014: Armature.002|Walk
+    9500000: //RootNode
+    10800000: Lamp
+    10800002: Sun
+    13700000: Sphere.001
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

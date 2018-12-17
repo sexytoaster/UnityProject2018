@@ -5,6 +5,7 @@ using UnityEngine;
 public class TileManager : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
+    public GameObject[] coins;
 
     private Transform playerTransform;
     private float spawnZ = 0.0f;
@@ -63,8 +64,42 @@ public class TileManager : MonoBehaviour
 
     private void SpawnTile(int prefabIndex = -1)
     {
+        int i, side; // side is either 0,1,2 left, middle, right
+        Vector3 v = new Vector3(2f, 0, 0);
+        Vector3 up = new Vector3(0, .5f, 0);
         GameObject go;
         go = Instantiate(tilePrefabs[RandomPrefabIndex()]) as GameObject;
+        side =Random.Range(0, 5);
+        float coinSpace = tileLength / 8;
+        float currentSpace = (tileLength / 2) * -1;
+        Debug.Log(currentSpace);
+        for (i = 0; i< 8; i++)
+        {
+            Vector3 temp = new Vector3(0, 0, currentSpace);
+            Vector3 space = new Vector3(0, 0, coinSpace);
+
+            GameObject coin;
+            coin = Instantiate(coins[0]) as GameObject;
+            coin.transform.SetParent(transform);
+            if (side == 2)
+            {
+                coin.transform.position = (Vector3.forward * spawnZ + temp) + v + up;
+            }
+            else if(side == 1)
+            {
+                coin.transform.position = (Vector3.forward * spawnZ + temp) + up;
+            }
+            else if (side == 0)
+            {
+                coin.transform.position = Vector3.forward * spawnZ + temp - v + up;
+            }
+            else if (side >= 3)
+            {
+
+            }
+            currentSpace = currentSpace + coinSpace;
+            Debug.Log(temp);
+        }
         go.transform.SetParent(transform);
         go.transform.position = Vector3.forward * spawnZ;
         spawnZ += tileLength;
