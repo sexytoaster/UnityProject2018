@@ -6,25 +6,36 @@ using UnityEngine.SceneManagement;
 public class PlayerMotor : MonoBehaviour
 {
     private const float LANE_DISTANCE = 2.0f;
-
+    Collider collider;
 
     private CharacterController controller;
     private float jumpForce = 7.0f;
     private float gravity = 12.0f;
     private float verticalVelocity;
     public float speed = 7.0f;
+    public float tempSpeed;
     public int desiredLane = 1; //0 = left, 1 = middle, 2 = right
     public bool sliding = false;
     public bool magnetic = false;
+    public bool headstart = false;
+    
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        collider = GetComponent<Collider>();
     }
 
     void Update()
     {
-        
+
+        if (headstart == true)
+        {
+            Debug.Log("1st Working");
+            StartCoroutine(Headstart());
+
+            headstart = false;
+        }
         speed = speed + .01f;
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -83,6 +94,7 @@ public class PlayerMotor : MonoBehaviour
 
 
         controller.Move(moveVector * Time.deltaTime);
+
     }
 
     private void MoveLane(bool goingRight)
@@ -133,5 +145,17 @@ public class PlayerMotor : MonoBehaviour
         playerSize *= 2;
         transform.localScale = playerSize;
         sliding = false;
+    }
+
+    IEnumerator Headstart()
+    {
+        float time = 0;
+        tempSpeed = speed;
+        speed = 40f;
+        collider.enabled = !collider.enabled;
+        yield return new WaitForSeconds(5.0f);
+        speed = tempSpeed;
+        collider.enabled = !collider.enabled;
+        Debug.Log("Working");
     }
 }
