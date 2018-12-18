@@ -13,6 +13,11 @@ public class Score : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         DontDestroyOnLoad(gameObject);
+        if (GameObject.FindGameObjectsWithTag("Manager").Length > 1)
+        {
+           Destroy(gameObject);
+        }
+        
         score = 0;
         scoreText.text = "0";
 	}
@@ -22,7 +27,7 @@ public class Score : MonoBehaviour {
         score = score + 1;
         //score1 = score + (Coins * 10);
         scoreText.text = "Score:   " + score;
-	}
+    }
 
     private void OnGUI()
     {

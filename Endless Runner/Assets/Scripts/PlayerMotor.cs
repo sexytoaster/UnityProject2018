@@ -12,7 +12,7 @@ public class PlayerMotor : MonoBehaviour
     private float jumpForce = 7.0f;
     private float gravity = 12.0f;
     private float verticalVelocity;
-    public float speed = 7.0f;
+    public float speed = 10.0f;
     public float tempSpeed;
     public int desiredLane = 1; //0 = left, 1 = middle, 2 = right
     public bool sliding = false;
@@ -36,7 +36,7 @@ public class PlayerMotor : MonoBehaviour
 
             headstart = false;
         }
-        speed = speed + .01f;
+        speed = speed + .005f;
         if (Input.GetKeyDown(KeyCode.A))
         {
             MoveLane(false);

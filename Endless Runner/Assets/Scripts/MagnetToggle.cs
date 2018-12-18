@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MagnetToggle : MonoBehaviour {
 
@@ -16,7 +17,15 @@ public class MagnetToggle : MonoBehaviour {
 	}
     public void ToggleAnalog()
     {
+        StartCoroutine(Toggle());
+
+    }
+
+    IEnumerator Toggle()
+    {
         playermotor.magnetic = !playermotor.magnetic;
         Debug.Log("OOF");
+        yield return new WaitForSeconds(5.0f);
+        playermotor.magnetic = !playermotor.magnetic;
     }
 }

@@ -10,7 +10,7 @@ public class TileManager : MonoBehaviour
     private Transform playerTransform;
     private float spawnZ = 0.0f;
     private float tileLength = 18.0f;
-    private int amnTilesOnScreen = 5;
+    private int amnTilesOnScreen = 10;
     private float safeZone = 15.0f;
     private int lastPrefabIndex = 0;
     public bool firstLap = false;
@@ -72,7 +72,6 @@ public class TileManager : MonoBehaviour
         side =Random.Range(0, 5);
         float coinSpace = tileLength / 8;
         float currentSpace = (tileLength / 2) * -1;
-        Debug.Log(currentSpace);
         for (i = 0; i< 8; i++)
         {
             Vector3 temp = new Vector3(0, 0, currentSpace);
