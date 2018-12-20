@@ -7,7 +7,7 @@ public class Score : MonoBehaviour {
     public int Coins = 0;
 
     public int score;
-    //public int score1;
+    public int score1;
     public Text scoreText;
 
 	// Use this for initialization
@@ -25,12 +25,7 @@ public class Score : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         score = score + 1;
-        //score1 = score + (Coins * 10);
+        score1 = score + (Coins * 10);
         scoreText.text = "Score:   " + score;
-    }
-
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(10, 10, 100, 20), "Coins : " + Coins);
     }
 }

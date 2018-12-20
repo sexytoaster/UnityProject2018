@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinScript : MonoBehaviour {
 
     private PlayerMotor playerMotor;
     public GameObject player;
+    public Text coinText;
+    public static int Coins;
 
     // Use this for initialization
     void Start () {
@@ -23,13 +26,14 @@ public class CoinScript : MonoBehaviour {
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * coinSpeed);
             }
         }
-	}
+        coinText.text = "Coins:   " + Coins;
+    }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.name == "Player")
         {
-            GameObject.FindGameObjectWithTag("Manager").GetComponent<Score>().Coins++;
+            Coins++;
             Destroy(gameObject);
         }
         else
