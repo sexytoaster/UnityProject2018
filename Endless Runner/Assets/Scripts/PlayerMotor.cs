@@ -19,6 +19,9 @@ public class PlayerMotor : MonoBehaviour
     public bool magnetic = false;
     public bool headstart = false;
     public int score2;
+    public int score1;
+
+    HighScoreScript highscore;
     
 
     void Start()
@@ -118,13 +121,18 @@ public class PlayerMotor : MonoBehaviour
     {
         if (hit.transform.tag == "Death")
         {
-            int score1 = GameObject.FindGameObjectWithTag("DefiniteScore").GetComponent<Score>().score1;
-            score2 = score1;
+            //score1 = GameObject.FindGameObjectWithTag("DefiniteScore").GetComponent<Score>().score1;
+            //score2 = 100;
             Debug.Log("prefxn?");
-            HighScoreScript.TryAddHighScore(score2);
+            //highscore.TryAddHighScore(score2);
             Debug.Log("postfxn?");
             SceneManager.LoadScene("DeathScreen");
         }
+    }
+
+    private void NewMethod()
+    {
+        highscore.TryAddHighScore(score2);
     }
 
     private void StartSliding()
